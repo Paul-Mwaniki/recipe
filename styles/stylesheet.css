@@ -35,3 +35,9 @@ h1{
     gap:20px;
 
 }
+@media screen and (max-width:800px) {
+    .card{
+        width:40%;
+    }
+    
+}
