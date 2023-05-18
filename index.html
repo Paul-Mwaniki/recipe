@@ -11,7 +11,7 @@
     <h1>Recipes</h1>
     
     <div class="container">
-    <div class="card">
+    <div class="card" data-key ="recipe1">
         <img src="images/tuna_fish_salad.jpg" alt="Fish Salad" style="width:100%">
         <div class="recipe_title">
         <a href="recipes/fish_salad.html">Tuna Fish Salad Recipe</a>
@@ -84,6 +84,23 @@
         </div>
     </div>
 </div>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach((card)=>{
+
+    card.addEventListener('mouseover',(e) => {
+        card.classList.add('grow');        
+        
+    })
+    card.addEventListener('mouseout', () =>{
+        card.classList.remove('grow');
+    })
+  }
+  );
+
+</script>
     
 </body>
 </html>
