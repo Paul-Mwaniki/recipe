@@ -88,14 +88,21 @@
 <script>
   const cards = document.querySelectorAll('.card');
 
+  
   cards.forEach((card)=>{
 
-    card.addEventListener('mouseover',(e) => {
-        card.classList.add('grow');        
-        
+    card.addEventListener('mouseover',() => {
+        card.classList.add('grow');   
+        const title = card.lastElementChild;
+        const text = title.firstElementChild;
+        text.classList.add('titleChange');        
+                
     })
     card.addEventListener('mouseout', () =>{
         card.classList.remove('grow');
+        const title = card.lastElementChild;
+        const text = title.firstElementChild;
+        text.classList.remove('titleChange');
     })
   }
   );
